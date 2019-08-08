@@ -1,0 +1,6 @@
+C:\Users\Damian\source\EZTest.Models\bin\Debug\EZTest.Models.dll
+C:\Users\Damian\source\EZTest.Models\bin\Debug\EZTest.Models.pdb
+C:\Users\Damian\source\EZTest.Models\obj\Debug\EZTest.Models.csprojAssemblyReference.cache
+C:\Users\Damian\source\EZTest.Models\obj\Debug\EZTest.Models.csproj.CoreCompileInputs.cache
+C:\Users\Damian\source\EZTest.Models\obj\Debug\EZTest.Models.dll
+C:\Users\Damian\source\EZTest.Models\obj\Debug\EZTest.Models.pdb

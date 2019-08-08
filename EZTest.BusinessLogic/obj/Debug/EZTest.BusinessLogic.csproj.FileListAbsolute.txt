@@ -1,0 +1,6 @@
+C:\Users\Miszczu\source\repos\EZTest\EZTest.BusinessLogic\bin\Debug\EZTest.BusinessLogic.dll
+C:\Users\Miszczu\source\repos\EZTest\EZTest.BusinessLogic\bin\Debug\EZTest.BusinessLogic.pdb
+C:\Users\Miszczu\source\repos\EZTest\EZTest.BusinessLogic\obj\Debug\EZTest.BusinessLogic.csprojAssemblyReference.cache
+C:\Users\Miszczu\source\repos\EZTest\EZTest.BusinessLogic\obj\Debug\EZTest.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Miszczu\source\repos\EZTest\EZTest.BusinessLogic\obj\Debug\EZTest.BusinessLogic.dll
+C:\Users\Miszczu\source\repos\EZTest\EZTest.BusinessLogic\obj\Debug\EZTest.BusinessLogic.pdb
