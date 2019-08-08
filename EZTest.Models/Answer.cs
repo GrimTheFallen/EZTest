@@ -9,7 +9,6 @@ namespace EZTest.Models
     {
         public int AnswerId { get; set; }
         public string AnswerField { get; set; }
-
         public int TestQuestionId { get; set; }
         public virtual TestQuestion TestQuestion { get; set; }
     }

@@ -10,6 +10,8 @@ namespace EZTest.Models
         public int TeacherId { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
+        public bool IsBoss { get; set; }
+
         public virtual ICollection<TeacherSubject> TeacherSubjects { get; set; }
     }
 }

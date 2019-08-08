@@ -8,8 +8,12 @@ namespace EZTest.Models
 {
     public class Institution
     {
-
-        public virtual ICollection<Teacher> Teachers { get; set; }
+        public int InstitutionId { get; set; }
+        public string InstitutionName { get; set; }
+        public string Type { get; set; } // like school, university etc.  
+        public virtual ICollection<TeacherInstitution> TeacherInstitutions { get; set; }
+        public virtual ICollection<Adress> Adresses { get; set; }
+        
 
     }
 }

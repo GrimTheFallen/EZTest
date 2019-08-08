@@ -11,7 +11,7 @@ namespace EZTest.Models
         public string Title { get; set; }
         public short DifficultyLevel { get; set; }
         public DateTime CreationDate { get; set; }
-         
+        
         public virtual ICollection<SubjectQuestion> SubjectQuestions { get; set; }
     }
 }
