@@ -13,6 +13,9 @@ namespace EZTest.Models
         public int CityCode { get; set; }
         public string Street { get; set; }
         public string BuildingNumber { get; set; }
+
+        public int InstitutionId { get; set; }
+
         public virtual Institution Institution { get; set; }
     }
 }

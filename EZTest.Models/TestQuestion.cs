@@ -9,7 +9,7 @@ namespace EZTest.Models
     {
         public int TestQuestionId { get; set; }
         public int TestId { get; set; }
-        public int QestionId { get; set; }
+        public int QuestionId { get; set; }
 
         public virtual DateTime CreationDate { get; set; }
 

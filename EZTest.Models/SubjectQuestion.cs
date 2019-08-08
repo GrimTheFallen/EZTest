@@ -10,6 +10,7 @@ namespace EZTest.Models
         public int SubjectQestionId { get; set; } 
         public int SubjectId { get; set; }
         public int QuestionId { get; set; }
+
         public DateTime CreationDate { get; set; }
 
         public virtual Subject Subject { get; set; }

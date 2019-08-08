@@ -9,8 +9,12 @@ namespace EZTest.Models
     public class TeacherInstitution
     {
         public int TeacherInstitutionId { get; set; }
+        public int TeacherId { get; set; }
+        public int InstitutionId { get; set; }
+
         public DateTime HireDate { get; set; }
-        public Teacher Teacher { get; set; }
-        public Institution Institution { get; set; }
+
+        public virtual Teacher Teacher { get; set; }
+        public virtual Institution Institution { get; set; }
     }
 }

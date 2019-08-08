@@ -13,5 +13,6 @@ namespace EZTest.Models
         public bool IsBoss { get; set; }
 
         public virtual ICollection<TeacherSubject> TeacherSubjects { get; set; }
+        public virtual ICollection<TeacherInstitution> TeacherInstitutions { get; set; }
     }
 }
