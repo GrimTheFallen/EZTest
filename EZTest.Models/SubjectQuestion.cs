@@ -7,7 +7,7 @@ namespace EZTest.Models
 {
     public class SubjectQuestion
     {
-        public int SubjectQestionId { get; set; } 
+        public int SubjectQuestionId { get; set; } 
         public int SubjectId { get; set; }
         public int QuestionId { get; set; }
 

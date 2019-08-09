@@ -10,8 +10,9 @@ namespace EZTest.Models
     {
         public int InstitutionId { get; set; }
         public string InstitutionName { get; set; }
-        public string Type { get; set; } // like school, university etc.  
+        public int InstitutionTypeId { get; set; } // like school, university etc.  
 
+        public virtual InstitutionType InstitutionType { get; set; }
         public virtual ICollection<TeacherInstitution> TeacherInstitutions { get; set; }
         public virtual ICollection<Adress> Adresses { get; set; }
         

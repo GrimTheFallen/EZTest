@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EZTest.Context;
+using EZTest.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +12,8 @@ namespace EZTest.Controllers
     {
         public ActionResult Index()
         {
+            EZTestDbContext db = new EZTestDbContext();
+            db.Adresses.Find(1);
             return View();
         }
 

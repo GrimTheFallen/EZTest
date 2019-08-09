@@ -1,0 +1,37 @@
+﻿@using GridMvc.Html
+@using EZTest.Models
+@using System.Web
+@model IQueryable<Test>
+
+@(Html.Grid(Model)
+                        .Columns(columns =>
+                        {
+                            columns.Add(x => x.Name).Titled("Nazwa testu").Sortable(true).Css("center grid-cell-wrap");
+                            columns.Add().Titled("").Sortable(true).Css("center grid-cell-wrap").Sanitized(false).Encoded(false).RenderValueAs
+                            (
+                                x => new MvcHtmlString("<button onclick='callme()' class='btn btn-sm btn-danger'>Usun</button>")
+                            );
+                        })
+                        .WithPaging(1)
+)
+
+
+<script>
+    function callme() {
+        
+        $.ajax({
+            type:'POST',
+            url: '@Url.Action("deleteMe")',
+            data: { someParam: 23},
+            cache: false,
+            success: function (data) {
+                if (data != null && data != undefined && data != '') {
+                    if (data)
+                        alert('ok');
+                    else
+                        alert('nie ok');
+                }
+            }
+        });
+    }
+</script>
