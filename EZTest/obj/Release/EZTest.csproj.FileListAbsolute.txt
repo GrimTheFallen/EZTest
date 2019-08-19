@@ -1,0 +1,2 @@
+C:\Users\Miszczu\source\repos\EZTest\EZTest\obj\Release\EZTest.csprojAssemblyReference.cache
+C:\Users\Miszczu\source\repos\EZTest\EZTest\obj\Release\EZTest.csproj.CoreCompileInputs.cache

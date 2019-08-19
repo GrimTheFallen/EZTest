@@ -1,0 +1,5 @@
+C:\Users\Miszczu\source\repos\EZTest\EZTest.Models\bin\Release\EZTest.Models.dll
+C:\Users\Miszczu\source\repos\EZTest\EZTest.Models\bin\Release\EZTest.Models.pdb
+C:\Users\Miszczu\source\repos\EZTest\EZTest.Models\obj\Release\EZTest.Models.csproj.CoreCompileInputs.cache
+C:\Users\Miszczu\source\repos\EZTest\EZTest.Models\obj\Release\EZTest.Models.dll
+C:\Users\Miszczu\source\repos\EZTest\EZTest.Models\obj\Release\EZTest.Models.pdb

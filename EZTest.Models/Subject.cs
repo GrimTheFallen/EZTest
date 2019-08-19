@@ -9,9 +9,10 @@ namespace EZTest.Models
     {
         public int SubjectId { get; set; }
         public string Name { get; set; }
-        public string TypeOfScience { get; set; } // IT, Math, Biology, etc. //ToDo
+        public int SubjectTypeId { get; set; } // IT, Math, Biology, etc. 
         
         public virtual ICollection<SubjectQuestion> SubjectQuestions { get; set; }
         public virtual ICollection<TeacherSubject> TeacherSubjects { get; set; }
+        public virtual SubjectType SubjectType { get; set; }
     }
 }

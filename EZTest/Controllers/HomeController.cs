@@ -13,7 +13,7 @@ namespace EZTest.Controllers
         public ActionResult Index()
         {
             EZTestDbContext db = new EZTestDbContext();
-            db.Adresses.Find(1);
+          //  db.Adresses.Find(1);
             return View();
         }
 

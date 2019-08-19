@@ -49,6 +49,7 @@
     <Compile Include="Question.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="SubjectQuestion.cs" />
+    <Compile Include="SubjectType.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="TeacherInstitution.cs" />
     <Compile Include="TeacherSubject.cs" />
