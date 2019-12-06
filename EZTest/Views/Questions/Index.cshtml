@@ -1,8 +1,7 @@
-﻿@model IEnumerable<EZTest.Models.Question>
+﻿@model IQueryable<EZTest.Models.Question>
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
@@ -10,7 +9,10 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+
+@Html.Partial("~/Views/Grids/QuestionsGrid.cshtml", Model)
+
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Title)
@@ -43,4 +45,4 @@
     </tr>
 }
 
-</table>
+</table>*@

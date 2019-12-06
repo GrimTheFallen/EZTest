@@ -1,0 +1,46 @@
+﻿@model IEnumerable<EZTest.Models.Answer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<h1>Justyna jest super</h1>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Question.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerField)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isCorrect)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerField)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isCorrect)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AnswerId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AnswerId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AnswerId })
+        </td>
+    </tr>
+}
+
+</table>

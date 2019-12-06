@@ -1,0 +1,24 @@
+﻿@using GridMvc.Html
+@using EZTest.Models
+@using System.Web
+@model IQueryable<Question>
+
+@(Html.Grid(Model)
+                        .Columns(columns =>
+                        {
+                            columns.Add(x => x.Title).Titled("Tytuł pytania").Sortable(true).Css("center grid-cell-wrap");
+							columns.Add(x => x.DifficultyLevel).Titled("Trudność pytania").Sortable(true).Css("center grid-cell-wrap");
+							columns.Add(x => x.CreationDate).Titled("Data Utworzenia").Sortable(true).Css("center grid-cell-wrap");
+							columns.Add().Titled("").Sortable(true).Css("center grid-cell-wrap").Sanitized(false).Encoded(false).RenderValueAs
+                            (
+                                x => new MvcHtmlString("<button onclick='callme()' class='btn btn-sm btn-success'>Odpowiedzi</button>")
+                            );
+                        })
+                        .WithPaging(100)
+)
+
+<script>
+    function callme() {
+		location.href = 'http://localhost:56879/Answers/Index';
+    }
+</script>

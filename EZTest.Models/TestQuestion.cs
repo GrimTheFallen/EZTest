@@ -15,6 +15,6 @@ namespace EZTest.Models
 
         public virtual Test Test { get; set; }
         public virtual Question Question { get; set; }
-        public virtual ICollection<Answer> Answers { get; set; }
+        
     }
 }

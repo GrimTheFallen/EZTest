@@ -11,108 +11,112 @@ using EZTest.Models;
 
 namespace EZTest.Controllers
 {
-    public class QuestionsController : Controller
+    public class AnswersController : Controller
     {
         private EZTestDbContext db = new EZTestDbContext();
 
-        // GET: Questions
+        // GET: Answers
         public ActionResult Index()
         {
-            // return View(db.Questions.ToList());
-            return View(db.Questions.OrderByDescending(x => x.QuestionId));
+            var answers = db.Answers.Include(a => a.Question);
+            return View(answers.ToList());
         }
 
-        // GET: Questions/Details/5
+        // GET: Answers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Question question = db.Questions.Find(id);
-            if (question == null)
+            Answer answer = db.Answers.Find(id);
+            if (answer == null)
             {
                 return HttpNotFound();
             }
-            return View(question);
+            return View(answer);
         }
 
-        // GET: Questions/Create
+        // GET: Answers/Create
         public ActionResult Create()
         {
+            ViewBag.QuestionId = new SelectList(db.Questions, "QuestionId", "Title");
             return View();
         }
 
-        // POST: Questions/Create
+        // POST: Answers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "QuestionId,Title,DifficultyLevel,CreationDate")] Question question)
+        public ActionResult Create([Bind(Include = "AnswerId,QuestionId,AnswerField,isCorrect")] Answer answer)
         {
             if (ModelState.IsValid)
             {
-                db.Questions.Add(question);
+                db.Answers.Add(answer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(question);
+            ViewBag.QuestionId = new SelectList(db.Questions, "QuestionId", "Title", answer.QuestionId);
+            return View(answer);
         }
 
-        // GET: Questions/Edit/5
+        // GET: Answers/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Question question = db.Questions.Find(id);
-            if (question == null)
+            Answer answer = db.Answers.Find(id);
+            if (answer == null)
             {
                 return HttpNotFound();
             }
-            return View(question);
+            ViewBag.QuestionId = new SelectList(db.Questions, "QuestionId", "Title", answer.QuestionId);
+            return View(answer);
         }
 
-        // POST: Questions/Edit/5
+        // POST: Answers/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "QuestionId,Title,DifficultyLevel,CreationDate")] Question question)
+        public ActionResult Edit([Bind(Include = "AnswerId,QuestionId,AnswerField,isCorrect")] Answer answer)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(question).State = EntityState.Modified;
+                db.Entry(answer).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(question);
+            ViewBag.QuestionId = new SelectList(db.Questions, "QuestionId", "Title", answer.QuestionId);
+            return View(answer);
         }
 
-        // GET: Questions/Delete/5
+        // GET: Answers/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Question question = db.Questions.Find(id);
-            if (question == null)
+            Answer answer = db.Answers.Find(id);
+            if (answer == null)
             {
                 return HttpNotFound();
             }
-            return View(question);
+            return View(answer);
         }
 
-        // POST: Questions/Delete/5
+        // POST: Answers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Question question = db.Questions.Find(id);
-            db.Questions.Remove(question);
+            Answer answer = db.Answers.Find(id);
+            db.Answers.Remove(answer);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
